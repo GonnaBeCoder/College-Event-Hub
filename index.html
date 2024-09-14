@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="shortcut icon" type="image\x-icon" href="lara_logo.jpg">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>College Event Hub</title>
+    <script>
+        function filterEvents(category) {
+            const cards = document.querySelectorAll('.card');
+
+            cards.forEach(card => {
+                const cardCategory = card.getAttribute('data-category');
+                if (category === 'all' || cardCategory === category) {
+                    card.style.display = 'flex'; // Show event if it matches the category or 'all'
+                } else {
+                    card.style.display = 'none'; // Hide event if it doesn't match
+                }
+            });
+
+        function toggleMenu() {
+        const navbar = document.querySelector('.navbar');
+        navbar.classList.toggle('show');
+    }
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul class="navbar">
+                <img src="https://www.vignanlara.org/images/logo/lara.png" alt="Logo"/>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#events">Events</a></li>
+                <li><a href="#contact">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="home">
+    </section>
+
+    <section id="events">
+        <h1>Upcoming Events</h1>
+        <div class="filter">
+            <button onclick="filterEvents('all')">All Events</button>
+            <button onclick="filterEvents('ongoing')">Ongoing</button>
+            <button onclick="filterEvents('sports')">Sports</button>
+            <button onclick="filterEvents('technical')">Technical</button>
+            <button onclick="filterEvents('completed')">Completed</button>
+        </div>
+        <div class="event-container">
+            <div class="card" data-category="ongoing">
+                <img src="https://www.soundconsultancy.co.uk/data/post_images/Post-Sing-Competition.jpg" class="img" />
+                <h2>Singing Evening</h2>
+                <p>Hello, the singing competition is conducted today on our campus.</p>
+                <h3>Date:15-09-2024</h3>
+                <h3 class="bold">Venue: Seminar Hall</h3>
+                <h3 class="bold">Timing: 3 to 5pm</h3>
+                <form action="https://forms.gle/TjS5onNizRLC76Xt8">
+                    <button class="register">
+                      <span class="text">REGISTER</span>
+                    </button>
+                  </form>                 
+            </div>
+            <div class="card" data-category="technical">
+                <img src="https://codingweek.org/wp-content/uploads/2023/09/chris-ried-ieic5Tq8YMk-unsplash-scaled.jpg" class="img" />
+                <h2>Coding Unicorns</h2>
+                <p>Hello, the Coding competition is conducted today on our campus.</p>
+                <h3>Date:16-09-2024</h3>
+                <h3 class="bold">Venue: New Hall</h3>
+                <h3 class="bold">Timing: 1 to 3pm</h3>
+                <form action="https://forms.gle/TjS5onNizRLC76Xt8">
+                    <button class="register">
+                      <span class="text">REGISTER</span>
+                    </button>
+                  </form>
+            </div>
+            <div class="card" data-category="sports">
+                <img src="https://www.timeshighereducation.com/student/sites/default/files/styles/default/public/different_sports.jpg?itok=CW5zK9vp" class="img" />
+                <h2>Sports</h2>
+                <p>Hello, this Sports competition is conducted today on our campus.</p>
+                <h3>Date:15-09-2024</h3>
+                <h3 class="bold">Venue: Main Ground</h3>
+                <h3 class="bold">Timing: 11 am to 5pm</h3>
+                <form id="registrationForm" action="https://forms.gle/TjS5onNizRLC76Xt8">
+                    <button class="register">
+                      <span class="text">REGISTER</span>
+                    </button>
+                  </form> 
+            </div>
+            <div class="card" data-category="ongoing">
+                <img src="https://res.cloudinary.com/jerrick/image/upload/v1690541085/64c39c1ddbf9e1001d0967bc.jpg" class="img" />
+                <h2>Treasury Competition</h2>
+                <p>Hello, the Treasury competition is conducted today on our campus.</p>
+                <h3>Date:14-09-2024</h3>
+                <h3 class="bold">Venue: OAT </h3>
+                <h3 class="bold">Timing: 10 am to 1pm</h3>
+                <form id="registrationForm" action="https://forms.gle/TjS5onNizRLC76Xt8">
+                    <button class="register">
+                      <span class="text">REGISTER</span>
+                    </button>
+                  </form> 
+            </div>
+            <div class="card" data-category="completed">
+                <img src="https://d197irk3q85upd.cloudfront.net/catalog/product/cache/95dbdf78ad5a0d4b547132f80fbac8f3/e/x/exhibition_banner_1.jpg" class="img" />
+                <h2>Art Exhibition</h2>
+                <p>Experience the creativity of students in our annual art exhibition.</p>
+                <h3>Date:5-09-2024</h3>
+                <h3 class="bold">Venue: Art Gallery</h3>
+                <h3 class="bold">Timing: 10am to 4pm</h3>
+                <form id="registrationForm" action="https://forms.gle/TjS5onNizRLC76Xt8">
+                    <button class="register"disabled style="background-color: gray; cursor: not-allowed;" >
+                      <span class="text">COMPLETED</span>
+                    </button>
+                  </form> 
+            </div>
+            <div class="card" data-category="ongoing">
+                <img src="https://th.bing.com/th/id/OIP.O5dwKOkxd9NyL1L86O-1zAHaE8?rs=1&pid=ImgDetMain" class="img" />
+                <h2>Anchoring</h2>
+                <p>Experience the creativity of students in our Anchoring.</p>
+                <h3>Date:15-09-2024</h3>
+                <h3 class="bold">Venue: OAT</h3>
+                <h3 class="bold">Timing: 10am to 4pm</h3>
+                <form id="registrationForm" action="https://forms.gle/TjS5onNizRLC76Xt8">
+                    <button class="register">
+                      <span class="text">REGISTER</span>
+                    </button>
+                  </form> 
+            </div>
+            <div class="card" data-category="technical">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTXH7GgAzMgerWu8oJewvKL6Jg0zWS02iKO0g&s" class="img" />
+                <h2>Debate Competition</h2>
+                <p>Join us for an exciting debate competition.</p>
+                <h3>Date:15-09-2024</h3>
+                <h3 class="bold">Venue: Lecture Hall</h3>
+                <h3 class="bold">Timing: 1pm to 3pm</h3>
+                <form id="registrationForm" action="https://forms.gle/TjS5onNizRLC76Xt8">
+                    <button class="register">
+                      <span class="text">REGISTER</span>
+                    </button>
+                  </form> 
+            </div>
+        </div>
+    </section>
+
+    <section id="about">
+        <h1>About Us!</h1>
+        <hr style="height:2px;border-width:0;color:gray;background-color:#7189FF">
+        <div class="about">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQOBpGuYeLxrMy7-UOvVLf-iUKIYRj8EZxE4Q&s" alt="">
+            <h4 style="text-align: center; margin-top: 30px;">Welcome to our College Event Hub, The one-stop destination for all the Exciting Events happening on campus! Our platform is designed to keep students, faculty, and visitors informed about the latest activities, workshops, competitions, and celebrations taking place at our college. Whether you're looking to showcase your talent, learn something new, or just have fun,there's always something happening here.
+                We aim to create a vibrant and engaging campus culture by bringing all events under one roof, ensuring that No one misses out on the Amazing Opportunities our college has to offer. Stay updated, get involved, and make the most of your college experience with us!
+                Feel free to adjust the tone or content to better fit your platform’s vision!</h4><br/>
+        </div>
+        <hr style="height:2px;border-width:0;color:gray;background-color:#7189FF">
+    </section>
+
+    <section id="contact">
+        <button class="contactButton" onclick="window.location.href='https://forms.gle/NKk5d1Ajc6mk6GCC7'";>
+            Contact
+            <div class="iconButton">
+              <svg
+                height="24"
+                width="24"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path d="M0 0h24v24H0z" fill="none"></path>
+                <path
+                  d="M16.172 11l-5.364-5.364 1.414-1.414L20 12l-7.778 7.778-1.414-1.414L16.172 13H4v-2z"
+                  fill="currentColor"
+                ></path>
+              </svg>
+            </div>
+          </button>          
+    </section>
+
+</body>
+<footer style="margin-bottom: 50px; text-align: center;">Copyright @Campus Event Hub Management Team. All Rights Reserved .</footer>
+</html>
